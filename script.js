@@ -17,34 +17,42 @@ function verificar() {
             if (idade >= 0 && idade < 10) {
                 // Criança
                 img.setAttribute('src', 'img/bebe_m.png')
+                document.body.style.background = 'rgb(107, 107, 241)'
             } else if (idade < 21) {
                 // Jovem
                 img.setAttribute('src', 'img/jovem_m.png')
+                document.body.style.background = 'rgb(107, 107, 241)'
             } else if (idade < 60) {
                 // Adulto
                 img.setAttribute('src', 'img/adulto_m.png')
-            }else {
+                document.body.style.background = 'rgb(107, 107, 241)'
+            } else {
                 // Idoso
                 img.setAttribute('src', 'img/idoso_m.png')
+                document.body.style.background = 'rgb(107, 107, 241)'
             }
         } else if (fsex[1].checked) {
             gênero = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 // Criança
                 img.setAttribute('src', 'img/bebe_f.png')
+                document.body.style.background = '#FC0FC0'
             } else if (idade < 21) {
                 // Jovem
                 img.setAttribute('src', 'img/jovem_f.png')
+                document.body.style.background = '#FC0FC0'
             } else if (idade < 60) {
                 // Adulto
                 img.setAttribute('src', 'img/adulto_f.png')
-            }else {
+                document.body.style.background = '#FC0FC0'
+            } else {
                 // Idoso
                 img.setAttribute('src', 'img/idosa_f.png')
+                document.body.style.background = '#FC0FC0'
             }
         }
         res.style.textAlign = 'center'
-        img.style.paddingTop= '15px'
+        img.style.paddingTop = '15px'
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
         res.appendChild(img)
     }
